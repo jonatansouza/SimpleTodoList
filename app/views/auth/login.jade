@@ -1,0 +1,26 @@
+extends ../_partials/login_layout
+
+block title
+    title Login
+
+block style-extra
+        include _login.css
+
+block conteudo
+    .main
+        form.form-signin(method="post", action="/login")
+
+            if(message.length > 0)
+                .alert.alert-danger.text-center #{message}
+
+
+            h2.form-signin-heading.text-center
+                span.glyphicon.glyphicon-lock Login
+
+            label.sr-only Email
+            input.form-control(name="username", autofocus, autocomplete="off", placeholder="Email", required)
+
+            label.sr-only
+            input.form-control(type='password', placeholder="Senha", name="password")
+
+            button(type='submit', class='btn btn-lg btn-primary btn-block') Entrar

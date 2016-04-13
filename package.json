@@ -1,0 +1,27 @@
+{
+  "name": "mylist",
+  "version": "1.0.0",
+  "description": "simple TODO list",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jonatan Souza",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.13.2",
+    "connect-ensure-login": "^0.1.1",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "^1.3.5",
+    "es6-promise": "^3.0.2",
+    "express": "^4.13.1",
+    "express-load": "^1.1.14",
+    "express-session": "^1.11.3",
+    "method-override": "^2.3.3",
+    "multer": "^1.0.3",
+    "node-sass-middleware": "^0.9.0",
+    "passport": "^0.2.2",
+    "passport-local": "^1.0.0",
+    "ejs": "~2.4.1"
+  }
+}

@@ -1,0 +1,13 @@
+nav(class="navbar navbar-default navbar-static-top" role="navigation", id="navbar")
+    .navbar-header
+        a(class="navbar-brand" , href="#") Controle Financeiro
+
+    ul.nav.navbar-nav
+        li
+            a(href="/") Home
+
+    ul(class="nav navbar-nav navbar-right")
+        li.navbar-text
+            strong #{user.fullname}
+        li
+            a(href="/logout", style={'margin-right' : '20px'}) Sair

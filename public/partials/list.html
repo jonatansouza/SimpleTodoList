@@ -1,0 +1,32 @@
+    <h2 class="text-center"><img src="/assets/images/listmain.png" width="30"> MyList <small>{{list.name}}</small> <img src="/assets/images/listmain.png" width="30"></h2>
+
+<h2>{{list.name}} 
+	<div class="pull-right">
+	
+	<button class="button-ghost" ng-click="update()">	
+		<img src="/assets/images/save.png" width="50">
+	</button>
+		
+	<button class="button-ghost">
+		<img ng-click="edit()" src="/assets/images/edit.png" width="50">
+	</button>
+
+	<button class="button-ghost">
+		<img ng-click="remove()" src="/assets/images/trash.png" width="50">
+	</button>
+
+
+
+</div>
+
+
+</h2>
+	<br>
+	<div class='list-group'>
+		<h3 class="list-group-item active text-center"><b>Itens</b></h3>
+		 <div ng-repeat="item in list.content">
+			<div ng-click="done(list.content, $index)" class="list-group-item" ng-class="{warning:item.status}"><h4 class="text-center" ng-class="{strike:item.status}">{{item.name}}</h4></div>
+		</div>
+	
+	</div>
+		

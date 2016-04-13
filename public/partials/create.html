@@ -1,0 +1,51 @@
+    <h2 class="text-center"><img src="/assets/images/listmain.png" width="30"> MyList <small>Create a new List</small> <img src="/assets/images/listmain.png" width="30">
+
+    <div class="pull-right" ng-show="formItens">
+        <button ng-click="saveList()" class="button-ghost">
+            <img src="/assets/images/save.png" width="50">
+        </button>
+    </div>
+
+</h2>
+
+        <div class="form-inline">
+    
+        <div class="form-group" ng-class="nameAvailable">
+            <label for="list">List</label>
+            <input type="text" class="form-control"  id="list"
+            name="list" ng-model="list.name" placeholder="Type a name" 
+            ng-keyup="checkName()" required >
+            <button ng-click="displayItens()" type="submit" class="button-ghost pull-right" ng-class="buttonDisplay">
+                <img src="/assets/images/check.png" width="40">
+            </button>
+            
+        </div>
+    
+        <div ng-init="formItens=false" ng-show="formItens"> 
+   
+                <br><br>
+                <form ng-submit="adicionaItem()">
+                    <div class="form-group">    
+                         <label for="itens">itens</label>
+                        <input class="form-control" type="text" ng-model="tmpItem" id="itens" required>
+                        <button class="button-ghost" type="submit">
+                            <img src="/assets/images/additem.png" width="40">
+                        </button>
+                    </div>
+                </form>
+            
+                                <table class="table table-hover" ng-show="itens.length > 0">
+                    <thead>
+                        <tr><td><b>item</b></td><td><b>name</b></td><td><b>remove</b></td></tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="item in itens">
+                            <td>{{$index+1}}</td><td>{{item.name}}</td><td><span ng-click="deleteItem(itens, $index)" class="glyphicon glyphicon-remove" aria-hidden="true"></span></td>
+                        </tr>
+                    </tbody>
+        </table>
+        </div>
+        </div>
+
+        
+

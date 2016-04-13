@@ -1,0 +1,29 @@
+<!doctype html>
+<html ng-app="mylist">
+    <head>
+       <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="/vendor/bootstrap/dist/css/bootstrap.css">
+        <link rel="stylesheet" href="/vendor/bootstrap/dist/css/bootstrap-theme.css">
+         <link rel="stylesheet" href="/css/custom.css">
+    </head>
+    <body>
+        <nav class="navbar navbar-inverse">
+           <div class="navbar-header">
+                <a class="navbar-brand" href="#"><span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span>
+ </a>
+             </div>
+        </nav>
+    <div class="container">
+    <div ng-view></div>
+        <script src="/vendor/angular/angular.js"></script>
+        <script src="/vendor/angular-route/angular-route.js"></script>
+        <script src="/vendor/angular-resource/angular-resource.js"></script>
+        <script src="/js/routes.js"></script>
+        <script src="/js/controllers/ListController.js"></script>
+        <script src="/js/controllers/CreateController.js"></script>
+        <script src="/js/controllers/EditController.js"></script>
+    
+    </div>
+    </body>
+<html>

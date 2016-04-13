@@ -1,0 +1,37 @@
+    <h2 class="text-center"><img src="/assets/images/listmain.png" width="30"> MyList <small>Edit</small> <img src="/assets/images/listmain.png" width="30">
+
+    <div class="pull-right" >
+        <button ng-click="saveList()" class="button-ghost">
+            <img src="/assets/images/save.png" width="50">
+        </button>
+    </div>
+
+</h2>
+
+        <h3>{{list.name}}</h3>
+            <br><br>
+                <form ng-submit="adicionaItem()" class="form-inline">
+                    <div class="form-group">    
+                         <label for="itens">itens</label>
+                        <input class="form-control" type="text" id="itens" ng-model="tmpItem" required>
+                        <button class="button-ghost" type="submit">
+                            <img src="/assets/images/additem.png" width="40">
+                        </button>
+                    </div>
+                </form>
+            
+                                <table class="table table-hover" ng-show="list.content.length > 0">
+                    <thead>
+                        <tr><td><b>item</b></td><td><b>name</b></td><td><b>remove</b></td></tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="item in list.content">
+                            <td>{{$index+1}}</td><td>{{item.name}}</td><td><span ng-click="deleteItem(list.content, $index)" class="glyphicon glyphicon-remove" aria-hidden="true"></span></td>
+                        </tr>
+                    </tbody>
+                </table>
+        </div>
+        </div>
+
+        
+

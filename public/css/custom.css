@@ -1,0 +1,29 @@
+.button-ghost {
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+}
+
+
+.strike {
+    text-decoration: line-through;
+}
+
+.warning{
+	  color: #FFFAFA;
+  		background-color: #D3D3D3
+  	}
+
+ 
+
+.special {
+    background-color: #F5F5F5;
+    color: #333333;
+    background-image: linear-gradient(to bottom, #FFFFFF, #E6E6E6);
+    text-decoration: none;
+    background-position: 0;
+    transition: none;
+}
