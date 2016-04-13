@@ -12,4 +12,6 @@ A simple app to pratice angularjs and nodejs.
 
 `bower install`
 
+###Run
+
 `node server.js`  
